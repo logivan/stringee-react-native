@@ -13,6 +13,7 @@
 		51540544208C66DF00914AE1 /* RNStringeeRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 51540539208C66DE00914AE1 /* RNStringeeRoom.m */; };
 		51540547208C66DF00914AE1 /* RNStringeeCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 5154053D208C66DF00914AE1 /* RNStringeeCall.m */; };
 		5154054A208C66DF00914AE1 /* RNStringeeInstanceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 51540542208C66DF00914AE1 /* RNStringeeInstanceManager.m */; };
+		7310EC9A22AE2EBA00A7BF85 /* Stringee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7310EC9822AE2EBA00A7BF85 /* Stringee.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,7 @@
 		5154053D208C66DF00914AE1 /* RNStringeeCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNStringeeCall.m; sourceTree = "<group>"; };
 		51540541208C66DF00914AE1 /* RNStringeeCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNStringeeCall.h; sourceTree = "<group>"; };
 		51540542208C66DF00914AE1 /* RNStringeeInstanceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNStringeeInstanceManager.m; sourceTree = "<group>"; };
+		7310EC9822AE2EBA00A7BF85 /* Stringee.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stringee.framework; path = frameworks/Stringee.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7310EC9A22AE2EBA00A7BF85 /* Stringee.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +81,7 @@
 				5149198F208EE2D900EF9B47 /* RNStringeeVideoViewManager.h */,
 				51491990208EE2D900EF9B47 /* RNStringeeVideoViewManager.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				7310EC9822AE2EBA00A7BF85 /* Stringee.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +124,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
@@ -233,10 +238,15 @@
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/frameworks",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
+					"$(SRCROOT)/frameworks/Stringee.framework/Headers",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
@@ -248,10 +258,15 @@
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/frameworks",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
+					"$(SRCROOT)/frameworks/Stringee.framework/Headers",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
